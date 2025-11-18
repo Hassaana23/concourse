@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM debian:latest
 
-RUN apk update \
- && apk add bash curl
+RUN apt-get update && \
+ apt-get install -y curl
 
 CMD ["bash"]
